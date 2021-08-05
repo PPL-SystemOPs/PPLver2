@@ -15,6 +15,10 @@ h1,h2,h3,h4,h5,h6 {
     display: block;
 }
 
+.display-flex {
+    display: flex;
+}
+
 /**
 * Main Menu
 */
@@ -45,10 +49,15 @@ h1,h2,h3,h4,h5,h6 {
 .dropdown-menu {
   margin-top: 0;
 }
-
+.dropdown-item {
+    font-size: 18px;
+}
 /**
 * Header
 */
+header {
+    margin-bottom: 80px;
+}
 .main-banner {
     box-shadow: rgba(0, 0, 0, 0.45) 0px 25px 20px -10px;
 }
@@ -106,13 +115,33 @@ h1,h2,h3,h4,h5,h6 {
     right: 20px;
 }
 
+/* Common Header pages */
+.common-header {
+    position: relative;
+}
+
+.banner-common-text {
+    position: absolute;
+    background-color: rgba(255, 255, 255, 0.75);
+    width: 100%;
+    top: 8vw;
+    left: 0;
+}
+
+.banner-common-text h1 {
+    margin: 20px 0;
+    padding: 0;
+    text-align: center;
+    text-transform: uppercase;
+}
 /**
 * Main Content
 */
-/* Homepage The power of networking */
-.power-of-networking {
-    padding: 30px 0 0 0;
+.inner-pages {
+    padding: 0px 0 60px 0;
 }
+
+/* Homepage The power of networking */
 .power-of-networking h2 {
     text-align: center;
 }
@@ -127,17 +156,19 @@ h1,h2,h3,h4,h5,h6 {
 }
 
 /* Homepage Boxes*/
+.our-services {
+    padding: 80px 0 100px 0;
+}
 .home-boxes-wrapper {
     display: flex;
     justify-content: space-between;
-    margin-top: 40px;
-    padding-bottom: 40px;
     flex-wrap: wrap;
+    padding: 0 20px;
 }
 .home-boxes-wrapper .home-boxes {
     text-align: center;
     width: 360px;
-    padding: 20px 0 50px 0;
+    padding: 20px 0 30px 0;
     margin: 20px 0px;
     min-height: 300px;
     background: #fff9ee45;
@@ -264,6 +295,92 @@ h1,h2,h3,h4,h5,h6 {
     list-style: none;
 }
 
+/**
+* About Us
+*/
+.about-us-content {
+    margin-bottom: 40px
+}
+.about-us-content p {
+    margin-bottom: 30px;
+}
+
+.quote {
+    padding-left: 43px;
+    border-left: 2px solid #139df8;
+    margin: 0 0 32px;
+    font-size: 16px;
+    line-height: 1.5;
+    color: #757580;
+}
+
+.our-amazing-team {
+    display: flex;
+    justify-content:space-between;
+    align-items: center;
+    flex-wrap: wrap;
+}
+.our-amazing-team .staff {
+    width: 25%;
+    padding: 10px 20px;
+}
+.our-amazing-team .staff img {
+    width: 100%;
+}
+.our-amazing-team .staff h3 {
+    font-size: 18px;
+    text-align: center;
+    padding: 15px 0;
+    background: #139df8;
+    font-weight: 500;
+    color: #fff;
+}
+
+.views-our-amazing-team h2 {
+    text-align: center;
+    font-size: 60px;
+    text-transform: capitalize;
+}
+
+/**
+* Benefits
+*/
+.benefits-content {
+    margin-bottom: 50px;
+}
+.benefits-list {
+    margin-top: 30px;
+}
+.benefits-list,
+.benefits-list li {
+    list-style: none;
+    margin-left: 0;
+    padding-left: 0;
+}
+.benefits-list li {
+    margin: 20px 0;
+}
+
+/**
+* Rules and Regulations
+*/
+.rules-and-regulations-content h3 {
+    margin-bottom: 40px;
+}
+.rules-and-regulations-content .quote {
+    padding-left: 0;
+    border-left: 0;
+    padding-bottom: 43px;
+    border-bottom: 1px solid #139df8;
+}
+.rules-item {
+    display: flex;
+    justify-content: start;
+    align-items: center;
+}
+.rules-item img {
+    margin: 0px 30px 0 0px;
+}
 /**
 * Footer
 */
@@ -426,6 +543,13 @@ h1,h2,h3,h4,h5,h6 {
     .home-boxes-wrapper .home-boxes {
         width: 310px;
     }
+    .banner-common-text {
+        top: 7vw;
+    }
+    .banner-common-text h1 {
+        font-size: 32px;
+        margin: 15px;
+    }
 }
 
 @media (max-width:1070px) {
@@ -453,8 +577,14 @@ h1,h2,h3,h4,h5,h6 {
 }
 
 @media (max-width: 1006px) {
-.navbar .nav-item:not(:last-child) {
-    margin-right: 25px;
+    .navbar .nav-item:not(:last-child) {
+        margin-right: 25px;
+    }
+    .our-amazing-team {
+        justify-content: center;
+    }
+    .our-amazing-team .staff {
+        width: 33.1%;
     }
 }
 
@@ -492,6 +622,9 @@ h1,h2,h3,h4,h5,h6 {
     
 }
 @media screen and (max-width:767px){
+    .banner-item-text {
+        left: 0;
+    }
     nav.navbar {
         position: fixed!important;
         top: 0;
@@ -501,6 +634,13 @@ h1,h2,h3,h4,h5,h6 {
     }
     header {
         margin-top: 106px;
+        margin-bottom: 50px;
+    }
+    .banner-common-text {
+        top: 22vw;
+    }
+    .banner-common-text h1 {
+        font-size: 35px;
     }
     .ppl-logos {
         padding: 0 20px;
@@ -534,12 +674,38 @@ h1,h2,h3,h4,h5,h6 {
     .home-boxes-wrapper .home-boxes {
         width: 500px;
     }
+    .our-amazing-team .staff {
+        width: 50%;
+    }
+    .views-our-amazing-team h2 {
+        font-size: 43px;
+    }
 }
 @media screen and (max-width:500px){
+    .power-of-networking {
+        padding: 60px 0 0 0;
+    }
     .power-of-networking h2 {
         font-size: 22px;
+    }
+    .home-boxes-wrapper {
+        margin-top: 20px;
     }
     .home-boxes-wrapper .home-boxes {
         width: 100%;
     }
+    .our-amazing-team .staff {
+        width: 100%;
+    }
+    .views-our-amazing-team h2 {
+        font-size: 35px;
+    }
+    .banner-common-text {
+        top: 20vw;
+    }
+    .banner-common-text h1 {
+        font-size: 25px;
+        margin: 10px 0;
+    }
+    
 }
