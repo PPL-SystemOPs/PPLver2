@@ -142,6 +142,12 @@ header {
 }
 
 /* Homepage The power of networking */
+
+section.the-power-of-networking {
+    background: #0b1419b5;
+    text-align: center;
+    padding: 30px;
+}
 .power-of-networking h2 {
     text-align: center;
 }
@@ -170,8 +176,8 @@ header {
     width: 360px;
     padding: 20px 0 30px 0;
     margin: 20px 0px;
-    min-height: 300px;
-    background: #fff9ee45;
+    min-height: 320px;
+    background: #cfa04945;
     box-shadow: rgba(0, 0, 0, 0.19) 0px 10px 20px, rgba(0, 0, 0, 0.23) 0px 6px 6px;
     border-radius: 15px;
     border: 1px solid #fff9ee45;
@@ -195,7 +201,14 @@ header {
     max-width: 160px;
 }
 .home-boxes-wrapper .home-boxes:nth-child(3) {
-    background: #ffec0d45;
+    background: #e9ecef;
+    text-align: left;
+}
+.home-boxes-wrapper .home-boxes:nth-child(3) h3 {
+    text-align: center;
+}
+.home-boxes-wrapper .home-boxes.ppl-box-events ul li {
+    margin: 10px 0;
 }
 .home-boxes-wrapper .home-boxes .newsletter-line {
     height: 10px;
@@ -211,6 +224,7 @@ header {
     margin: 0 auto;
     width: inherit;
     text-align: center;
+    text-transform: capitalize;
 }
 
 /* Service System */
@@ -381,6 +395,137 @@ header {
 .rules-item img {
     margin: 0px 30px 0 0px;
 }
+
+/**
+* Member listing
+*/
+div#search {
+    background: #00b0cc12;
+    padding: 20px;
+}
+.member-item {
+    margin: 20px 0;
+}
+.member-item h3 {
+    background-color: aliceblue;
+    padding: 10px 20px;
+}
+.member-item .member-info {
+    display: flex;
+}
+.member-item .member-info > div:nth-child(1) {
+    padding: 20px;
+}
+.member-item .member-info > div:nth-child(2) {
+    padding: 20px 30px;
+}
+.member-item .member-info .member-logo img {
+    display: block;
+}
+.member-details table {
+    width: 100%;
+}
+.member-details table tr td {
+    padding: 5px 20px;
+    font-size: 14px;
+}
+.member-details table tr td:nth-child(2) {
+    /*min-width: 500px;*/
+    padding: 5px 0px;
+}
+.member-details table tr td.Active {
+    background: url(../images/active.png) no-repeat;
+    width: 100px;
+    font-size: 0px;
+    height: 20px;
+}
+.member-details table tr td.Active {
+    background: url(../images/active.png) no-repeat;
+    width: 100px;
+    font-size: 0px;
+    height: 20px;
+}
+.member-details table tr td.Blue.Member {
+    background: url(../images/blue.jpg) no-repeat;
+    width: 140px;
+    margin-left: 35px;
+    height: 20px;
+    padding-left: 20px;
+    font-size: 0px;
+}
+.member-details table tr td.Silver.Member {
+    background: url(../images/silver.jpg) no-repeat;
+    width: 140px;
+    margin-left: 35px;
+    height: 20px;
+    padding-left: 20px;
+    font-size: 0px;
+}
+.member-details table tr td.Gold.Member {
+    background: url(../images/gold.jpg) no-repeat;
+    width: 140px;
+    margin-left: 35px;
+    height: 20px;
+    padding-left: 20px;
+    font-size: 0px;
+}
+/**
+* Star Rating
+*/
+.rate {
+    float: left;
+    height: auto;
+}
+.rate:not(:checked) > input {
+    position:absolute;
+    top:-9999px;
+}
+.rate:not(:checked) > label {
+    float:right;
+    width:1em;
+    overflow:hidden;
+    white-space:nowrap;
+    cursor:pointer;
+    font-size:30px;
+    color:#ccc;
+}
+.rate:not(:checked) > label:before {
+    content: '★ ';
+}
+.rate > input:checked ~ label {
+    color: #ffc700;    
+}
+.rate:not(:checked) > label:hover,
+.rate:not(:checked) > label:hover ~ label {
+    color: #deb217;  
+}
+.rate > input:checked + label:hover,
+.rate > input:checked + label:hover ~ label,
+.rate > input:checked ~ label:hover,
+.rate > input:checked ~ label:hover ~ label,
+.rate > label:hover ~ input:checked ~ label {
+    color: #c59b08;
+}
+
+
+
+/* member listing v2 */
+.member-listing-wrapper-v2 {
+    display: flex;
+    justify-content:space-evenly;
+    flex-wrap: wrap;
+}
+.member-listing-wrapper-v2 .member-item {
+    width: 30%;
+}
+.member-listing-wrapper-v2 .member-item .member-info {
+    display: block;
+}
+
+.pagination-wrapper {
+    margin: 50px auto;
+}
+
 /**
 * Footer
 */
@@ -392,7 +537,11 @@ header {
 	text-align: left;
 	font-size: 16px;
     font-weight: 600;
-	padding: 55px 50px;
+	padding: 55px 0px;
+}
+.footer-distributed .container {
+    display: flex;
+    justify-content: space-around;
 }
 .footer-distributed .footer-left,
 .footer-distributed .footer-center,
@@ -402,7 +551,8 @@ header {
 }
 /* Footer left */
 .footer-distributed .footer-left{
-	width: 40%;
+	width: 30%;
+    padding: 0px 30px 0 0;
 }
 /* The company logo */
 .footer-distributed h3{
@@ -436,7 +586,7 @@ header {
 }
 /* Footer Center */
 .footer-distributed .footer-center{
-	width: 35%;
+	width: 25%;
 }
 .footer-distributed .footer-center i{
 	background-color:  #33383b;
@@ -481,7 +631,7 @@ header {
 }
 /* Footer Right */
 .footer-distributed .footer-right{
-	width: 20%;
+	width: 30%;
 }
 .footer-distributed .footer-company-about{
 	line-height: 20px;
@@ -552,6 +702,12 @@ header {
     }
 }
 
+@media (max-width:1079px) {
+    .navbar-expand-lg .navbar-nav a.nav-link, .navbar-expand-lg .navbar-nav.dropdown-item {
+        font-size: 20px;
+    }
+}
+
 @media (max-width:1070px) {
     .service-system-items {
         justify-content: space-around;
@@ -568,9 +724,11 @@ header {
     .home-boxes-wrapper .home-boxes {
         width: 350px;
     }
+    /*
     .home-boxes-wrapper .home-boxes:nth-child(3) {
         width: 700px;
     }
+    */
     .system-item {
         width: 350px;
     }
@@ -624,6 +782,9 @@ header {
 @media screen and (max-width:767px){
     .banner-item-text {
         left: 0;
+    }
+    .footer-distributed .container {
+        display: block;
     }
     nav.navbar {
         position: fixed!important;
@@ -680,10 +841,25 @@ header {
     .views-our-amazing-team h2 {
         font-size: 43px;
     }
+    .member-details table {
+        width: auto;
+    }
+    .rate {
+
+    }
+    .member-item .member-logo {
+        text-align: center;
+    }
+    .member-item .member-info {
+        display: block;
+    }
+    .member-listing-wrapper-v2 .member-item {
+        width: 100%;
+    }
 }
 @media screen and (max-width:500px){
     .power-of-networking {
-        padding: 60px 0 0 0;
+        padding: 20px 0 30px 0;
     }
     .power-of-networking h2 {
         font-size: 22px;
